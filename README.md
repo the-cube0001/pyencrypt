@@ -21,3 +21,4 @@ Replace `<file>` with the name of the file you want to encrypt/decrypt, and `<pa
 passcode you want to use to encrypt and decrypt the file.
 
 made by the_cube#0001 on discord
+comments were added by the_cube#0001 on discord
