@@ -20,5 +20,8 @@ To decrypt a file, use the following command:
 Replace `<file>` with the name of the file you want to encrypt/decrypt, and `<passcode>` with the 
 passcode you want to use to encrypt and decrypt the file.
 
+If no passcode is specified using the --code argument, the script prompts the user to enter a passcode at runtime. This allows the user to securely enter the passcode without it being visible on the command line.
+
+
 made by the_cube#0001 on discord
 comments were added by the_cube#0001 on discord
