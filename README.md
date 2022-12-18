@@ -17,7 +17,7 @@ To decrypt a file, use the following command:
 
 `python pyencrypt.py --decrypt <file> --code <passcode>`
 
-Replace <file> with the name of the file you want to encrypt/decrypt, and <passcode> with the 
+Replace `<file>` with the name of the file you want to encrypt/decrypt, and `<passcode>` with the 
 passcode you want to use to encrypt and decrypt the file.
 
 made by the_cube#0001 on discord
