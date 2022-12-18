@@ -1,5 +1,6 @@
 import argparse
 import base64
+import getpass
 import os
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
@@ -51,14 +52,21 @@ def decrypt(file, passcode):
     with open(file, 'wb') as f:
         f.write(decrypted_data)
 
-if __name__ == '__main__':
+def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('--encrypt', dest='action', action='store_const', const=encrypt)
     parser.add_argument('--decrypt', dest='action', action='store_const', const=decrypt)
     parser.add_argument('file')
-    parser.add_argument('--code', required=True)
+    parser.add_argument('--code', required=False)
     args = parser.parse_args()
+
+    # If no passcode is specified, prompt the user to enter one
+    if args.code is None:
+        args.code = getpass.getpass('Enter passcode: ')
 
     # Perform the specified action (encrypt or decrypt) on the file
     args.action(args.file, args.code)
+
+if __name__ == '__main__':
+    main()
